@@ -31,7 +31,8 @@ public class App {
             TrendingResponse t = mediaApi.vrTrendingGet(5, null);
             System.out.println(t);
 
-            SearchMediaResponse s = mediaApi.vrSearchqqGet("minsk", null, null, null, null);
+            SearchMediaResponse s = mediaApi.vrSearchGet("svrf", null, null, null, null);
+            System.out.println(s);
         } catch (ApiException e) {
             System.err.println(e.getMessage());
             e.printStackTrace();
