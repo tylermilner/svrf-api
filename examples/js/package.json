@@ -1,0 +1,23 @@
+{
+  "name": "svrf-api-example",
+  "version": "1.0.0",
+  "description": "Example api application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Svrf/svrf-api.git"
+  },
+  "keywords": [
+    "svrf",
+    "api"
+  ],
+  "author": "SVRF",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Svrf/svrf-api/issues"
+  },
+  "homepage": "https://github.com/Svrf/svrf-api#readme"
+}
