@@ -1,1 +1,1 @@
-# svrf-client-examples
+# Java example
