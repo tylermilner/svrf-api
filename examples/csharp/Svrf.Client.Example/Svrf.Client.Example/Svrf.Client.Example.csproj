@@ -42,7 +42,7 @@
       <HintPath>..\packages\RestSharp.105.1.0\lib\net452\RestSharp.dll</HintPath>
     </Reference>
     <Reference Include="Svrf.Client, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Svrf.Client.1.0.0\lib\net45\Svrf.Client.dll</HintPath>
+      <HintPath>..\packages\SVRF.Client.1.0.0\lib\net45\Svrf.Client.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
