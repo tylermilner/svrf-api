@@ -15,24 +15,24 @@ public class App {
         AuthenticateApi apiInstance = new AuthenticateApi();
         MediaApi mediaApi = new MediaApi();
         
-        Body body = new Body();
-        body.apiKey("your api key");
+        Body body = new Body()
+            .apiKey("your api key");
         
         try {
-            AuthResponse result = apiInstance.appAuthenticatePost(body);
+            AuthResponse result = apiInstance.authenticate(body);
             System.out.println(result);
             ApiClient client = new ApiClient();
             client.setApiKey(result.getToken());
             mediaApi.setApiClient(client);
 
-            SingleMediaResponse m = mediaApi.vrIdGet("82989");
-            System.out.println(m);
+            SingleMediaResponse m = mediaApi.getById("82989");
+            System.out.println(m.getMedia().getTitle());
 
-            TrendingResponse t = mediaApi.vrTrendingGet(5, null);
-            System.out.println(t);
+            TrendingResponse t = mediaApi.getTrending(5, null);
+            System.out.println(t.getMedia().get(0).getTitle());
 
-            SearchMediaResponse s = mediaApi.vrSearchGet("svrf", null, null, null, null);
-            System.out.println(s);
+            SearchMediaResponse s = mediaApi.search("svrf", null, null, null, null);
+            System.out.println(s.getMedia().get(0).getTitle());
         } catch (ApiException e) {
             System.err.println(e.getMessage());
             e.printStackTrace();
