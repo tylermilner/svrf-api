@@ -93,8 +93,9 @@ class ViewController: UIViewController, ARSessionDelegate {
         // BMC todo
         nodeForContentType = [
             .faceGeometry: FaceMask(geometry: maskGeometry, modelName: "CapMonster", modelPath: "Models.scnassets/CapMonster"),
-            .faceGeometry2: FaceMask(geometry: maskGeometry, modelName: "CarrotHead", modelPath: "Models.scnassets/CarrotHead"),
-            .blendShapeModelIO: BlendShapesModelIO(geometry: maskGeometry),
+            .faceGeometry2: FaceMask(geometry: maskGeometry, modelName: "NickiMinaj", modelPath: "Models.scnassets/NickiMinaj"),
+            .faceGeometry3: FaceMask(geometry: maskGeometry, modelName: "Seahawks", modelPath: "Models.scnassets/Seahawks"),
+
         ]
     }
     
