@@ -10,7 +10,7 @@
 		11012C181F3E1ED30099F3A4 /* ContentSelectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11012C171F3E1ED30099F3A4 /* ContentSelectionController.swift */; };
 		274AE350211BA44200D038E7 /* Models.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 274AE34F211BA44200D038E7 /* Models.scnassets */; };
 		2791C93D212E05E800FF1195 /* SvrfApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2791C93C212E05E800FF1195 /* SvrfApi.swift */; };
-		27D9945B21220D1F000F0458 /* BlendShapesModelIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D9945A21220D1F000F0458 /* BlendShapesModelIO.swift */; };
+		27D9945B21220D1F000F0458 /* ModelIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D9945A21220D1F000F0458 /* ModelIO.swift */; };
 		3929C48C1E89EC2C00E00B60 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3929C48B1E89EC2C00E00B60 /* AppDelegate.swift */; };
 		3929C48E1E89EC2C00E00B60 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3929C48D1E89EC2C00E00B60 /* ViewController.swift */; };
 		3929C4911E89EC2C00E00B60 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3929C48F1E89EC2C00E00B60 /* Main.storyboard */; };
@@ -18,7 +18,7 @@
 		39D8DC1B1E8ADAE600386B05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39D8DC1A1E8ADAE600386B05 /* LaunchScreen.storyboard */; };
 		47FFCCDC607E72D94EB038A3 /* Pods_ARKitFaceExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A19D9CE9CF3FD5BB3A933835 /* Pods_ARKitFaceExample.framework */; };
 		C41366B91EB80DD400EC054A /* StatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41366B81EB80DD400EC054A /* StatusViewController.swift */; };
-		C81DA0C61F4CC79A002AF1DA /* FaceMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81DA0C51F4CC79A002AF1DA /* FaceMask.swift */; };
+		C81DA0C61F4CC79A002AF1DA /* FaceFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81DA0C51F4CC79A002AF1DA /* FaceFilter.swift */; };
 		C8904E501F4CF1CE0089E530 /* VirtualContentUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8904E4F1F4CF1CE0089E530 /* VirtualContentUpdater.swift */; };
 		C8904E521F4CF9EC0089E530 /* VirtualContentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8904E511F4CF9EC0089E530 /* VirtualContentType.swift */; };
 		C8904E551F4CFD000089E530 /* VirtualFaceContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8904E541F4CFD000089E530 /* VirtualFaceContent.swift */; };
@@ -29,7 +29,7 @@
 		11063F3B1EBE651B0033EE6D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		274AE34F211BA44200D038E7 /* Models.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = Models.scnassets; sourceTree = "<group>"; };
 		2791C93C212E05E800FF1195 /* SvrfApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SvrfApi.swift; sourceTree = "<group>"; };
-		27D9945A21220D1F000F0458 /* BlendShapesModelIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlendShapesModelIO.swift; sourceTree = "<group>"; };
+		27D9945A21220D1F000F0458 /* ModelIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelIO.swift; sourceTree = "<group>"; };
 		2B1CED731B5FE752835B78E0 /* Pods-ARKitFaceExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARKitFaceExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-ARKitFaceExample/Pods-ARKitFaceExample.release.xcconfig"; sourceTree = "<group>"; };
 		3929C4881E89EC2C00E00B60 /* ARKitFaceExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARKitFaceExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3929C48B1E89EC2C00E00B60 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -41,7 +41,7 @@
 		864FB315E24494FE60BF3B92 /* Pods-ARKitFaceExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARKitFaceExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ARKitFaceExample/Pods-ARKitFaceExample.debug.xcconfig"; sourceTree = "<group>"; };
 		A19D9CE9CF3FD5BB3A933835 /* Pods_ARKitFaceExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ARKitFaceExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C41366B81EB80DD400EC054A /* StatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusViewController.swift; sourceTree = "<group>"; };
-		C81DA0C51F4CC79A002AF1DA /* FaceMask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceMask.swift; sourceTree = "<group>"; };
+		C81DA0C51F4CC79A002AF1DA /* FaceFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceFilter.swift; sourceTree = "<group>"; };
 		C8904E4F1F4CF1CE0089E530 /* VirtualContentUpdater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualContentUpdater.swift; sourceTree = "<group>"; };
 		C8904E511F4CF9EC0089E530 /* VirtualContentType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualContentType.swift; sourceTree = "<group>"; };
 		C8904E541F4CFD000089E530 /* VirtualFaceContent.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = VirtualFaceContent.swift; sourceTree = "<group>"; tabWidth = 4; };
@@ -145,8 +145,8 @@
 			isa = PBXGroup;
 			children = (
 				C8904E541F4CFD000089E530 /* VirtualFaceContent.swift */,
-				C81DA0C51F4CC79A002AF1DA /* FaceMask.swift */,
-				27D9945A21220D1F000F0458 /* BlendShapesModelIO.swift */,
+				C81DA0C51F4CC79A002AF1DA /* FaceFilter.swift */,
+				27D9945A21220D1F000F0458 /* ModelIO.swift */,
 			);
 			path = VirtualFaceContent;
 			sourceTree = "<group>";
@@ -278,9 +278,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C8904E501F4CF1CE0089E530 /* VirtualContentUpdater.swift in Sources */,
-				C81DA0C61F4CC79A002AF1DA /* FaceMask.swift in Sources */,
+				C81DA0C61F4CC79A002AF1DA /* FaceFilter.swift in Sources */,
 				3929C48E1E89EC2C00E00B60 /* ViewController.swift in Sources */,
-				27D9945B21220D1F000F0458 /* BlendShapesModelIO.swift in Sources */,
+				27D9945B21220D1F000F0458 /* ModelIO.swift in Sources */,
 				C41366B91EB80DD400EC054A /* StatusViewController.swift in Sources */,
 				3929C48C1E89EC2C00E00B60 /* AppDelegate.swift in Sources */,
 				2791C93D212E05E800FF1195 /* SvrfApi.swift in Sources */,
@@ -427,6 +427,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AVJ6A8DFE5;
 				INFOPLIST_FILE = "$(SRCROOT)/ARKitFaceExample/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.${PRODUCT_NAME}${SAMPLE_CODE_DISAMBIGUATOR}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -447,6 +448,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AVJ6A8DFE5;
 				INFOPLIST_FILE = "$(SRCROOT)/ARKitFaceExample/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.${PRODUCT_NAME}${SAMPLE_CODE_DISAMBIGUATOR}";
 				PRODUCT_NAME = "$(TARGET_NAME)";

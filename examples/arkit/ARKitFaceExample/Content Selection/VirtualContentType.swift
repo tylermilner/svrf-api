@@ -7,18 +7,16 @@ A type representing the available options for virtual content.
 
 enum VirtualContentType: Int {
     case none
-    case faceGeometry
-    case faceGeometry2
-    case blendShapeModelIO
+    case faceFilter
+    case modelIO
     
-    static let orderedValues: [VirtualContentType] = [.none, .faceGeometry, .faceGeometry2, .blendShapeModelIO]
+    static let orderedValues: [VirtualContentType] = [.none, .faceFilter, .modelIO]
     
     var imageName: String {
         switch self {
         case .none: return "none"
-        case .faceGeometry: return "faceGeometry"
-        case .faceGeometry2: return "faceGeometry"
-        case .blendShapeModelIO: return "blendShapeModel"
+        case .faceFilter: return "faceGeometry"
+        case .modelIO: return "blendShapeModel"
         }
     }
 }

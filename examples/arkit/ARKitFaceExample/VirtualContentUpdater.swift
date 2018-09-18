@@ -17,7 +17,7 @@ class VirtualContentUpdater: NSObject, ARSCNViewDelegate {
      See `axesNode`.
      - Tag: ShowCoordinateOrigin
      */
-    let showsCoordinateOrigin = false
+    let showsCoordinateOrigin = true
     
     // MARK: Properties
     

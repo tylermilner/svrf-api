@@ -6,5 +6,6 @@ target 'ARKitFaceExample' do
   use_frameworks!
 
   # Pods for ARKitFaceExample
+  pod 'Alamofire', '~> 4.5.0'
   pod 'SVRFClientSwift', '~> 1.1.2'
 end

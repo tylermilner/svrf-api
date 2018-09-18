@@ -18,7 +18,7 @@ class ViewController: UIViewController, ARSessionDelegate {
     @IBOutlet weak var blurView: UIVisualEffectView!
 
     lazy var statusViewController: StatusViewController = {
-        return childViewControllers.lazy.flatMap({ $0 as? StatusViewController }).first!
+        return childViewControllers.lazy.compactMap({$0 as? StatusViewController}).first!
     }()
 
     // MARK: Properties
@@ -32,7 +32,7 @@ class ViewController: UIViewController, ARSessionDelegate {
     
     let contentUpdater = VirtualContentUpdater()
     
-    var selectedVirtualContent: VirtualContentType = .faceGeometry {
+    var selectedVirtualContent: VirtualContentType = .faceFilter {
         didSet {
             // Set the selected content based on the content type.
             contentUpdater.virtualFaceNode = nodeForContentType[selectedVirtualContent]
@@ -48,11 +48,14 @@ class ViewController: UIViewController, ARSessionDelegate {
         sceneView.session.delegate = self
         sceneView.automaticallyUpdatesLighting = true
         
+        // Debug statistics
+        sceneView.showsStatistics = true
+        
         createFaceGeometry()
         
         // TODO(BMC): ModelIO testing
-        let SvrfApiController: SvrfAPI = SvrfAPI()
-        SvrfApiController.request(closure: SvrfApiController.getMediaById, id: "84807")
+        // let SvrfApiController: SvrfAPI = SvrfAPI()
+        // SvrfApiController.request(closure: SvrfApiController.getMediaById, id: "84807")
 
         // Set the initial face content, if any.
         contentUpdater.virtualFaceNode = nodeForContentType[selectedVirtualContent]
@@ -92,9 +95,8 @@ class ViewController: UIViewController, ARSessionDelegate {
         
         // BMC todo
         nodeForContentType = [
-            .faceGeometry: FaceMask(geometry: maskGeometry, modelName: "CapMonster", modelPath: "Models.scnassets/CapMonster"),
-            .faceGeometry2: FaceMask(geometry: maskGeometry, modelName: "CarrotHead", modelPath: "Models.scnassets/CarrotHead"),
-            .blendShapeModelIO: BlendShapesModelIO(geometry: maskGeometry),
+            .faceFilter: FaceFilter(geometry: maskGeometry, modelName: "CapMonster", modelPath: "Models.scnassets/CapMonster"),
+            .modelIO: ModelIO(geometry: maskGeometry),
         ]
     }
     
