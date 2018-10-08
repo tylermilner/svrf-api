@@ -1,0 +1,33 @@
+PODS:
+  - Alamofire (4.5.1)
+  - GLTFSceneKit (0.1.3)
+  - SVRFClientSwift (1.2.1):
+    - Alamofire (~> 4.5.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.5.0)
+  - GLTFSceneKit (from `https://github.com/SVRF/GLTFSceneKit.git`)
+  - SVRFClientSwift (~> 1.2.1)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - SVRFClientSwift
+
+EXTERNAL SOURCES:
+  GLTFSceneKit:
+    :git: https://github.com/SVRF/GLTFSceneKit.git
+
+CHECKOUT OPTIONS:
+  GLTFSceneKit:
+    :commit: 5973b51bfae1ad4714fd0c215d4bfb9a2868b88d
+    :git: https://github.com/SVRF/GLTFSceneKit.git
+
+SPEC CHECKSUMS:
+  Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
+  GLTFSceneKit: b3f11615c62ef8b95a1c067d2599756485a9e1e2
+  SVRFClientSwift: 95a831bb51502a033e79e0dd025275108bfbc99e
+
+PODFILE CHECKSUM: 41b22b5132b3187ebb5d61b0cd30745ebaf93505
+
+COCOAPODS: 1.5.3

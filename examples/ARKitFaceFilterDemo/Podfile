@@ -1,0 +1,12 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '11.0'
+
+target 'ARKitFaceFilterDemo' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for ARKitFaceFilterDemo
+  pod 'Alamofire', '~> 4.5.0'
+  pod 'SVRFClientSwift', '~> 1.2.1'
+  pod 'GLTFSceneKit', :git => 'https://github.com/SVRF/GLTFSceneKit.git'
+end
