@@ -10,7 +10,7 @@ import ARKit
 import SceneKit
 
 protocol VirtualFaceContent {
-    func update(withFaceAnchor: ARFaceAnchor)
+    func update(withFaceAnchor: ARFaceAnchor, andMTLDevice device: MTLDevice)
 }
 
 typealias VirtualFaceNode = VirtualFaceContent & SCNNode

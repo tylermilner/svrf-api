@@ -11,8 +11,15 @@ import SceneKit
 import ARKit
 import GLTFSceneKit
 
+enum ChildNode: String {
+    case Head = "Head"
+    case Occluder = "Occluder"
+}
+
 class RemoteFaceFilter: SCNNode, VirtualFaceContent {
+    
     private var head: SCNNode?
+    private var device: MTLDevice?
     
     init(fromUrl url: String) {
         super.init()
@@ -24,27 +31,34 @@ class RemoteFaceFilter: SCNNode, VirtualFaceContent {
     }
     
     func loadFaceFilter(_ glbModelUrl: URL) -> Void {
-        DispatchQueue.global(qos: .background).async {
+        DispatchQueue.global(qos: .background).async { [unowned self] in
             do {
                 // Try loading the glb model from a remote url
                 let modelSource = GLTFSceneSource(url: glbModelUrl)
                 let node = try modelSource.scene().rootNode
                 
-                // There will be a child node named "Head", which is the root node of the Face Filter
-                if let head = node.childNode(withName: "Head", recursively: true) {
-                    self.head = head
+                self.head = SCNNode()
+                
+                if let occluderNode = node.childNode(withName: ChildNode.Occluder.rawValue, recursively: true) {
                     
-                    // Normalize morphs
-                    self.head?.morpher?.calculationMode = SCNMorpherCalculationMode.normalized
+                    self.head?.addChildNode(occluderNode)
                     
-                    // Add the Face Filter into the current scene
-                    self.addChildNode(self.head!)
-                    
+                    let faceGeometry = ARSCNFaceGeometry(device: self.device!)
+                    self.head?.geometry = faceGeometry
+                    self.head?.geometry?.firstMaterial?.colorBufferWriteMask = []
+                    self.head?.renderingOrder = -1
                 }
                 
-                // because our models don't have standardized extent limits yet
-                let factor = 0.06
-                self.scale = SCNVector3(factor, factor, factor)
+                if let headNode = node.childNode(withName: ChildNode.Head.rawValue, recursively: true) {
+                    
+                    self.head?.addChildNode(headNode)
+                }
+                
+                // Normalize morphs
+                self.head?.morpher?.calculationMode = SCNMorpherCalculationMode.normalized
+                
+                // Add the Face Filter into the current scene
+                self.addChildNode(self.head!)
             } catch {
                 print("Error creating scene: \(error.localizedDescription)")
             }
@@ -65,7 +79,8 @@ class RemoteFaceFilter: SCNNode, VirtualFaceContent {
         }
     }
     
-    func update(withFaceAnchor faceAnchor: ARFaceAnchor) {
+    func update(withFaceAnchor faceAnchor: ARFaceAnchor, andMTLDevice device: MTLDevice ) {
+        self.device = device
         blendShapes = faceAnchor.blendShapes
     }
 }
