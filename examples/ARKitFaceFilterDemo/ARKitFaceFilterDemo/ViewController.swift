@@ -11,6 +11,7 @@ import SceneKit
 import ARKit
 import SVRFClientSwift
 import GLTFSceneKit
+import SvrfSDK
 
 class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate, UISearchBarDelegate, UICollectionViewDelegate {
 
@@ -130,15 +131,14 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate, UI
         if let query = searchBar.text {
             activityIndicator.startAnimating()
 
-            let SvrfApiController: SvrfAPI = SvrfAPI()
-            SvrfApiController.request(closure: SvrfApiController.search, id: query, respondingWith: { (items: [Media]) -> Void in
+            SvrfSDK.search(query: query, type: [._3d], stereoscopicType: nil, category: nil, size: 10, pageNum: nil, onSuccess: { items in
                 self.searchView.isHidden = false
                 self.activityIndicator.stopAnimating()
                 
                 let faceFilters = items.filter({ (media : Media) -> Bool in
                     return media.files?.glb != nil
                 })
-
+                
                 // Pass the search results to the search view
                 self.searchView.items = faceFilters
                 if faceFilters.count < 1 {
@@ -155,7 +155,9 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate, UI
                 
                 // Tell the search view to reload
                 self.searchView.reloadData()
-            })
+            }) { error in
+                
+            }
         }
 
         searchBar.showsCancelButton = false
