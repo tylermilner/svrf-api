@@ -9,7 +9,8 @@
 import Foundation
 import SceneKit
 import ARKit
-import GLTFSceneKit
+import SvrfGLTFSceneKit
+import SvrfSDK
 
 enum ChildNode: String {
     case Head = "Head"
@@ -21,46 +22,15 @@ class RemoteFaceFilter: SCNNode, VirtualFaceContent {
     private var head: SCNNode?
     private var device: MTLDevice?
     
-    init(fromUrl url: String) {
-        super.init()
-        self.loadFaceFilter(URL(string: url)!)
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("\(#function) has not been implemented")
-    }
-    
     func loadFaceFilter(_ glbModelUrl: URL) -> Void {
         DispatchQueue.global(qos: .background).async { [unowned self] in
-            do {
-                // Try loading the glb model from a remote url
-                let modelSource = GLTFSceneSource(url: glbModelUrl)
-                let node = try modelSource.scene().rootNode
+            
+            if let device = self.device {
+                self.head = SvrfSDK.getHead(with: device, glbModelUrl: glbModelUrl)
                 
-                self.head = SCNNode()
-                
-                if let occluderNode = node.childNode(withName: ChildNode.Occluder.rawValue, recursively: true) {
-                    
-                    self.head?.addChildNode(occluderNode)
-                    
-                    let faceGeometry = ARSCNFaceGeometry(device: self.device!)
-                    self.head?.geometry = faceGeometry
-                    self.head?.geometry?.firstMaterial?.colorBufferWriteMask = []
-                    self.head?.renderingOrder = -1
+                if let head = self.head {
+                    self.addChildNode(head)
                 }
-                
-                if let headNode = node.childNode(withName: ChildNode.Head.rawValue, recursively: true) {
-                    
-                    self.head?.addChildNode(headNode)
-                }
-                
-                // Normalize morphs
-                self.head?.morpher?.calculationMode = SCNMorpherCalculationMode.normalized
-                
-                // Add the Face Filter into the current scene
-                self.addChildNode(self.head!)
-            } catch {
-                print("Error creating scene: \(error.localizedDescription)")
             }
         }
     }

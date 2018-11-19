@@ -10,7 +10,7 @@ import UIKit
 import SceneKit
 import ARKit
 import SVRFClientSwift
-import GLTFSceneKit
+import SvrfGLTFSceneKit
 import SvrfSDK
 
 class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate, UISearchBarDelegate, UICollectionViewDelegate {
@@ -63,12 +63,15 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate, UI
         // Hide the search view initially
         searchView.isHidden = false
         
+        // Init RemoteFaceFilter
+        let remoteFaceFilter = RemoteFaceFilter()
+        self.contentUpdater.virtualFaceNode = remoteFaceFilter
+        
         // Set hook to create a new RemoteFaceFilter when a face filter is selected from the results
         searchView.selectedItemDidChange = { [unowned self] (_ media: Media) -> Void in
             if let glbUrl = media.files?.glb {
                 // Set the current filter to be the selected Face Filter
-                self.contentUpdater.virtualFaceNode = RemoteFaceFilter(fromUrl: glbUrl)
-                
+                remoteFaceFilter.loadFaceFilter(URL(string: glbUrl)!)
                 // Show the reset button
                 self.resetButton.isHidden = false
             }
