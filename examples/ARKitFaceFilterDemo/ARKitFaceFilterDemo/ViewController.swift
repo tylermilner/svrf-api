@@ -9,8 +9,6 @@
 import UIKit
 import SceneKit
 import ARKit
-import SVRFClientSwift
-import SvrfGLTFSceneKit
 import SvrfSDK
 
 class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate, UISearchBarDelegate, UICollectionViewDelegate {
@@ -68,13 +66,11 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate, UI
         self.contentUpdater.virtualFaceNode = remoteFaceFilter
         
         // Set hook to create a new RemoteFaceFilter when a face filter is selected from the results
-        searchView.selectedItemDidChange = { [unowned self] (_ media: Media) -> Void in
-            if let glbUrl = media.files?.glb {
+        searchView.selectedItemDidChange = { [unowned self] (_ media: SvrfMedia) -> Void in
                 // Set the current filter to be the selected Face Filter
-                remoteFaceFilter.loadFaceFilter(URL(string: glbUrl)!)
+                remoteFaceFilter.loadFaceFilter(media: media)
                 // Show the reset button
                 self.resetButton.isHidden = false
-            }
         }
         
         // Add the activity indicator in the middle of the search view
@@ -138,7 +134,7 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate, UI
                 self.searchView.isHidden = false
                 self.activityIndicator.stopAnimating()
                 
-                let faceFilters = items.filter({ (media : Media) -> Bool in
+                let faceFilters = items.filter({ (media : SvrfMedia) -> Bool in
                     return media.files?.glb != nil
                 })
                 
@@ -185,11 +181,11 @@ class ContentCell: UICollectionViewCell {
 }
 
 class SearchViewController : UICollectionView, UICollectionViewDelegate, UICollectionViewDataSource {
-    public var items: [Media] = []
+    public var items: [SvrfMedia] = []
     
-    var selectedItem: Media?
+    var selectedItem: SvrfMedia?
     
-    var selectedItemDidChange: (Media) -> Void = { _ in }
+    var selectedItemDidChange: (SvrfMedia) -> Void = { _ in }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)

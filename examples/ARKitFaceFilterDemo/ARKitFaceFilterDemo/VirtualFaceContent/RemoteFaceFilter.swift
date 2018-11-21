@@ -9,26 +9,19 @@
 import Foundation
 import SceneKit
 import ARKit
-import SvrfGLTFSceneKit
 import SvrfSDK
-
-enum ChildNode: String {
-    case Head = "Head"
-    case Occluder = "Occluder"
-}
 
 class RemoteFaceFilter: SCNNode, VirtualFaceContent {
     
-    private var head: SCNNode?
+    private var faceFilter: SCNNode?
     private var device: MTLDevice?
     
-    func loadFaceFilter(_ glbModelUrl: URL) -> Void {
+    func loadFaceFilter(media: SvrfMedia) -> Void {
         DispatchQueue.global(qos: .background).async { [unowned self] in
-            
             if let device = self.device {
-                self.head = SvrfSDK.getHead(with: device, glbModelUrl: glbModelUrl)
+                self.faceFilter = SvrfSDK.getFaceFilter(with: device, media: media)
                 
-                if let head = self.head {
+                if let head = self.faceFilter {
                     self.addChildNode(head)
                 }
             }
@@ -40,7 +33,7 @@ class RemoteFaceFilter: SCNNode, VirtualFaceContent {
         didSet {
             // each child node may have blend shape targets so we enumerate over all of them to make sure
             // that each blend target is expressed completely
-            head?.enumerateHierarchy({ (node, _) in
+            faceFilter?.enumerateHierarchy({ (node, _) in
                 for (blendShape, weight) in blendShapes {
                     let targetName = blendShape.rawValue
                     node.morpher?.setWeight(weight as! CGFloat, forTargetNamed: targetName)

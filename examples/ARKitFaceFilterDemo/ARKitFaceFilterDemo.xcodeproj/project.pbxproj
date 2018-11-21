@@ -17,7 +17,6 @@
 		ACB2ABA721594C390082494A /* VirtualFaceContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB2ABA621594C390082494A /* VirtualFaceContent.swift */; };
 		ACB2ABAA21594CD00082494A /* RemoteFaceFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB2ABA921594CD00082494A /* RemoteFaceFilter.swift */; };
 		ACB2ABAD215953430082494A /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = ACB2ABAC215953430082494A /* LICENSE.txt */; };
-		ACBD06FF215AE59200239861 /* SvrfApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBD06FE215AE59200239861 /* SvrfApi.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,7 +34,6 @@
 		ACB2ABA621594C390082494A /* VirtualFaceContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VirtualFaceContent.swift; sourceTree = "<group>"; };
 		ACB2ABA921594CD00082494A /* RemoteFaceFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFaceFilter.swift; sourceTree = "<group>"; };
 		ACB2ABAC215953430082494A /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
-		ACBD06FE215AE59200239861 /* SvrfApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SvrfApi.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,7 +87,6 @@
 		ACB2AB8F215944BD0082494A /* ARKitFaceFilterDemo */ = {
 			isa = PBXGroup;
 			children = (
-				ACBD06FE215AE59200239861 /* SvrfApi.swift */,
 				ACB2AB90215944BD0082494A /* AppDelegate.swift */,
 				ACB2ABA821594CB20082494A /* VirtualFaceContent */,
 				ACB2ABA421594BB30082494A /* VirtualContentUpdater.swift */,
@@ -199,16 +196,18 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ARKitFaceFilterDemo/Pods-ARKitFaceFilterDemo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/GLTFSceneKit/GLTFSceneKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SVRFClientSwift/SVRFClientSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SvrfGLTFSceneKit/SvrfGLTFSceneKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SvrfSDK/SvrfSDK.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GLTFSceneKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVRFClientSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SvrfGLTFSceneKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SvrfSDK.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -247,7 +246,6 @@
 				ACB2ABA721594C390082494A /* VirtualFaceContent.swift in Sources */,
 				ACB2AB95215944BE0082494A /* ViewController.swift in Sources */,
 				ACB2AB91215944BD0082494A /* AppDelegate.swift in Sources */,
-				ACBD06FF215AE59200239861 /* SvrfApi.swift in Sources */,
 				ACB2ABA521594BB30082494A /* VirtualContentUpdater.swift in Sources */,
 				ACB2ABAA21594CD00082494A /* RemoteFaceFilter.swift in Sources */,
 			);
@@ -397,14 +395,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8P738U5SGK;
+				DEVELOPMENT_TEAM = V88MRDGKUF;
 				INFOPLIST_FILE = ARKitFaceFilterDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.svrf.ARKitFaceFilterDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.svrf.ARKitFaceFilterDemo.svrf;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -417,14 +415,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8P738U5SGK;
+				DEVELOPMENT_TEAM = V88MRDGKUF;
 				INFOPLIST_FILE = ARKitFaceFilterDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.svrf.ARKitFaceFilterDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.svrf.ARKitFaceFilterDemo.svrf;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
