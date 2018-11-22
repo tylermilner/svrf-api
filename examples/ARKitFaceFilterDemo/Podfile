@@ -6,6 +6,5 @@ target 'ARKitFaceFilterDemo' do
   use_frameworks!
 
   # Pods for ARKitFaceFilterDemo
-  pod 'SvrfSDK', :git => 'https://github.com/SVRF/svrf-ios-sdk.git', :tag => '1.0.0'
-  
+  pod 'SvrfSDK', :path => '/Users/andreyevstratenko/Desktop/SvrfSDK'
 end

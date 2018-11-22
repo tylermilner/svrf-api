@@ -11,7 +11,13 @@ import SceneKit
 import ARKit
 import SvrfSDK
 
+protocol RemoteFaceFilterDelegate {
+    func faceFilterLoaded()
+}
+
 class RemoteFaceFilter: SCNNode, VirtualFaceContent {
+    
+    var delegate: RemoteFaceFilterDelegate?
     
     private var faceFilter: SCNNode?
     private var device: MTLDevice?
@@ -24,6 +30,10 @@ class RemoteFaceFilter: SCNNode, VirtualFaceContent {
                 if let head = self.faceFilter {
                     self.addChildNode(head)
                 }
+            }
+            
+            DispatchQueue.main.async {
+                self.delegate?.faceFilterLoaded()
             }
         }
     }
