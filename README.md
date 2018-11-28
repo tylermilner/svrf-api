@@ -1,6 +1,6 @@
 # Getting Started
 
-SVRF's API allows you to supercharge your project or app with the first and largest search engine for immersive experiences. We make it simple for any developer to incorporate highly immersive experiences with all kinds of applications: virtual reality, augmented reality, mixed reality, mobile, and web.
+The SVRF API allows you to supercharge your project or app with the first and largest search engine for immersive experiences. We make it simple for any developer to incorporate highly immersive experiences with all kinds of applications: virtual reality, augmented reality, mixed reality, mobile, and web.
 
 The SVRF API is based on REST principles, allowing it to integrate cross-platform. Our endpoints return responses in [JSON][]. We support [CORS][], allowing you to access immersive experiences indexed by SVRF on your own web domains. We provide a variety of resolutions, projections, and file formats to support most modern clients.
 
@@ -8,11 +8,11 @@ SVRF API Documentation is available at [https://developers.svrf.com][SVRF Dev].
 
 ## Access and API Keys
 
-The SVRF API is currently in private beta and access is limited to select partners. If you’re interested in using the SVRF API for your app or project, please contact us at [api@svrf.com][API Email]. We cannot guarantee immediate access for all requests, but we will announce a public release in the coming months.
+To  generate a SVRF API Key, create an account on [www.svrf.com][SVRF] and go to the *Apps* section of the [User Settings][SVRF User Settings] page.
 
-See our [terms of service][TOS] for restrictions on using the SVRF API.
+See our [terms of service][TOS] for restrictions on using the SVRF API, libraries, and SDKs.
 
-If you have any questions please feel free to contact us at [api@svrf.com][API Email]. Please submit API corrections via [GitHub Issues][].
+If you have questions or need support, please [create a ticket][Support].
 
 ## API Highlights
 
@@ -29,9 +29,15 @@ If you have any questions please feel free to contact us at [api@svrf.com][API E
 You can use SVRF API libraries to encapsulate endpoint requests:
 
 * [C#][CSharp]
-* [Java][Java]
-* [Javascript][Javascript]
-* [Objective C][Objective C]
+* [Java][]
+* [Javascript][]
+* [Swift][]
+
+## SDKs
+
+You can use the SVRF SDKs to encapsulate endpoint requests and render 3D face filters in your application.
+
+* [iOS SDK][]
 
 ## Attribution
 
@@ -51,14 +57,16 @@ The SVRF API has a generous rate limit to ensure the best experience for your us
 
 [API Email]: mailto:api@svrf.com
 [CORS]: https://en.wikipedia.org/wiki/Cross-origin_resource_sharing
-[CSharp]: https://www.nuget.org/packages/SVRF.Client
+[CSharp]: https://github.com/SVRF/svrf-csharp-client
 [Docs Search]: https://developers.svrf.com/#tag/Media/paths/~1vr~1search?q={q}/get
 [Docs Trending]: https://developers.svrf.com/#tag/Media/paths/~1vr~1trending/get
-[GitHub Issues]: https://github.com/Svrf/svrf-api/issues
-[Java]: https://mvnrepository.com/artifact/com.svrf/svrf-client
-[Javascript]: https://www.npmjs.com/package/svrf-client
+[iOS SDK]: https://github.com/SVRF/svrf-ios-sdk
+[Java]: https://github.com/SVRF/svrf-java-client
+[Javascript]: https://github.com/SVRF/svrf-javascript-client
 [JSON]: http://www.json.org/
-[Objective C]: https://cocoapods.org/pods/SVRFClient
+[Support]: https://github.com/SVRF/svrf-api/issues/new/choose
 [SVRF]: https://www.svrf.com
 [SVRF Dev]: https://developers.svrf.com
+[SVRF User Settings]: https://www.svrf.com/user/settings
+[Swift]: https://github.com/SVRF/svrf-swift4-client
 [TOS]: https://www.svrf.com/terms
