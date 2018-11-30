@@ -53,7 +53,7 @@ As per section 5 A of the [terms of service][TOS], __we require all apps that us
 
 ## Rate Limits
 
-The SVRF API has a generous rate limit to ensure the best experience for your users. We rate limit by IP address with a maximum of 100 requests per second. If you exceed the rate limit, requests from the requesting IP address will be blocked for 60 seconds.
+The SVRF API has a generous rate limit to ensure the best experience for your users. We rate limit by IP address with a maximum of 100 requests per 10 seconds. If you exceed the rate limit, requests from the requesting IP address will be blocked for 60 seconds.
 
 [API Email]: mailto:api@svrf.com
 [CORS]: https://en.wikipedia.org/wiki/Cross-origin_resource_sharing
