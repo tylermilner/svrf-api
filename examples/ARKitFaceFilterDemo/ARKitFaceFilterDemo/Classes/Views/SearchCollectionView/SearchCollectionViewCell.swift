@@ -14,6 +14,7 @@ class SearchCollectionViewCell: UICollectionViewCell {
     @IBOutlet private weak var previewImageView: UIImageView!
     @IBOutlet private weak var titleLabel: UILabel!
     
+    //Change an appearance of cell when selected
     override var isSelected: Bool {
         didSet {
             if isSelected {
@@ -26,7 +27,10 @@ class SearchCollectionViewCell: UICollectionViewCell {
     
     func setupWith(media: Media) {
         
+        // Set media title
         titleLabel.text = media.title
+        
+        // Set media previewImage
         if let previewImage = media.files?.images?._720x720, let previewUrl = URL(string: previewImage) {
             do {
                 previewImageView.image = try UIImage(data: Data(contentsOf: previewUrl))
@@ -38,6 +42,8 @@ class SearchCollectionViewCell: UICollectionViewCell {
     }
     
     func highLightCell(highLight: Bool) {
+        
+        // Hightlight cell
         previewImageView.backgroundColor = highLight ? .gray : .clear
     }
 }
