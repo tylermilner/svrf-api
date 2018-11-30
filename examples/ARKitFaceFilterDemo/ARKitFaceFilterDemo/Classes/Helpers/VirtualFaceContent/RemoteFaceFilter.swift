@@ -38,6 +38,14 @@ class RemoteFaceFilter: SCNNode, VirtualFaceContent {
         }
     }
     
+    func resetFaceFilters() {
+        if let head = self.faceFilter {
+            for child in head.childNodes {
+                child.removeFromParentNode()
+            }
+        }
+    }
+    
     /// - Tag: BlendShapeAnimation
     var blendShapes: [ARFaceAnchor.BlendShapeLocation: NSNumber] = [:] {
         didSet {

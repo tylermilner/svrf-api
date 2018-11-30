@@ -117,10 +117,10 @@ extension ViewController: UISearchBarDelegate {
 extension ViewController: SearchCollectionViewDelegate {
    
     func mediaSelected(media: SvrfMedia) {
-        
-            activityIndicator.startAnimating()
-            remoteFaceFilter.loadFaceFilter(media: media)
-            resetButton.isHidden = false
+        remoteFaceFilter.resetFaceFilters() // Remove any existing face filter from the SCNScene
+        activityIndicator.startAnimating()
+        remoteFaceFilter.loadFaceFilter(media: media)
+        resetButton.isHidden = false
     }
 }
 
@@ -130,4 +130,3 @@ extension ViewController: RemoteFaceFilterDelegate {
         activityIndicator.stopAnimating()
     }
 }
- 
