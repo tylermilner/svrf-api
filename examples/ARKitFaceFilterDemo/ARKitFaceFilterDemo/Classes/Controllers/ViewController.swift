@@ -51,7 +51,7 @@ class ViewController: UIViewController {
     
     
     @IBAction func resetButtonClicked(_ sender: UIButton) {
-        contentUpdater.resetFaceNode()
+        remoteFaceFilter.resetFaceFilters()
         resetButton.isHidden = true
     }
 }

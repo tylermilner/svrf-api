@@ -38,7 +38,7 @@ class VirtualContentUpdater: NSObject, ARSCNViewDelegate {
         }
     }
     
-    func resetFaceNode() {
+    private func resetFaceNode() {
         guard let node = faceNode else { return }
         
         // Remove all the current children.
