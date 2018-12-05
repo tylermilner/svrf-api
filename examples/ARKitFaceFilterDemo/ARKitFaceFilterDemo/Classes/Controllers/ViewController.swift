@@ -81,8 +81,8 @@ class ViewController: UIViewController {
     @IBAction func resetButtonClicked(_ sender: UIButton) {
         
         // Remove any existing face filter from the SCNScene
-        contentUpdater.resetFaceNode()
-        
+        remoteFaceFilter.resetFaceFilters()
+
         // Hide the resetButton
         resetButton.isHidden = true
     }

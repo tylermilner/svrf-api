@@ -31,9 +31,8 @@ class VirtualContentUpdater: NSObject {
         }
     }
     
-    //MARK: private functions
-    private func setupFaceNodeContent() {
-        
+    private func resetFaceNode() {
+
         // faceNode unwrapping
         guard let node = faceNode else { return }
         
