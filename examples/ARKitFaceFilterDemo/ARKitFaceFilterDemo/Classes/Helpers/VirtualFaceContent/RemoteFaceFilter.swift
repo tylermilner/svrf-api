@@ -52,9 +52,8 @@ class RemoteFaceFilter: SCNNode, VirtualFaceContent {
             // each child node may have blend shape targets so we enumerate over all of them to make sure
             // that each blend target is expressed completely
             faceFilter?.enumerateHierarchy({ (node, _) in
-                for (blendShape, weight) in blendShapes {
-                    let targetName = blendShape.rawValue
-                    node.morpher?.setWeight(weight as! CGFloat, forTargetNamed: targetName)
+                if node.morpher?.targets != nil {
+                    SvrfSDK.setBlendShapes(blendShapes: blendShapes, for: node)
                 }
             })
         }
