@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        // Authenticate with an API key. Do not forget add Surf API key into Info.Plist file.
+        // Authenticate with an API key. Do not forget add Svrf API key into Info.Plist file.
         SvrfSDK.authenticate(onSuccess: {
             
         }) { error in
