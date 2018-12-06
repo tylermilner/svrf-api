@@ -2,6 +2,8 @@
 
 This example uses the [SVRF API][Docs] to create a Face Filter iOS App using [ARKit][]. In this example, users can search for [SVRF][] Face Filters and experience them using their front-facing TrueDepth camera.
 
+![ARKit Face Filter SDK Search Demo](./assets/face-filter-search-demo.jpeg) ![ARKit Face Filter SDK Demo](./assets/face-filter-demo.gif)
+
 ## About ARKit
 
 [ARKit][] on iPhone X and newer uses the front-facing TrueDepth camera to provide real-time information about the pose and expression of the user's face.
@@ -14,7 +16,7 @@ Using ARKit's face detection and the SVRF API, you can apply 3D face filters to 
 
 - [Xcode 10][Xcode]
 - [CocoaPods][]
-- iPhone X or newer with iOS 12
+- iPhone X or newer with iOS 11+
 
 ## Get Started
 
@@ -27,17 +29,28 @@ git clone https://github.com/SVRF/svrf-api.git && cd ./svrf-api/examples/ARKitFa
 Install the dependencies using [CocoaPods][].
 
 ```bash
-pods install
+pod install
 ```
 
 Open `ARKitFaceFilterDemo.xcworkspace` in Xcode.
 
-You will need to provide your SVRF API Key in [`./ARKitFaceFilterDemo/SvrfApi.swift`](./ARKitFaceFilterDemo/SvrfApi.swift), line 15. You can learn more about acquiring an API key at [developers.svrf.com][Docs].
+Configure [`./ARKitFaceFilterDemo/Plists/Info.plist`][Plist] with your **SVRF_API_KEY**. You can learn more about acquiring an API key at [developers.svrf.com][Docs].
+
+```plist
+<plist version="1.0">
+  <dict>
+    <key>SVRF_API_KEY</key>
+    <string>{your-api-key}</string>
+    <!-- ... -->
+  </dict>
+</plist>
+```
 
 To build and test the app, connect an iPhone X or newer and run the app.
 
 [ARKit]: https://developer.apple.com/arkit/
 [CocoaPods]: https://cocoapods.org/
 [Docs]: https://developers.svrf.com
+[Plist]: ./ARKitFaceFilterDemo/Plists/Info.plist
 [SVRF]: https://www.svrf.com
 [Xcode]: https://developer.apple.com/xcode/
