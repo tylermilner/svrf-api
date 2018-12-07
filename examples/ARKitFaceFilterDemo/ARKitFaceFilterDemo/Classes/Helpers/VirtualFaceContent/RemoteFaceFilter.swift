@@ -33,19 +33,12 @@ class RemoteFaceFilter: SCNNode {
         
         // Put code into background thread
         DispatchQueue.global(qos: .background).async { [unowned self] in
+            // Generate a face filter SCNNode from a Media
+            self.faceFilter = SvrfSDK.getFaceFilter(media: media)
             
-            // self.device unwrappin g
-            if let device = self.device {
-                
-                // Get faceFilter with MTLDevice and Media
-                self.faceFilter = SvrfSDK.getFaceFilter(with: device, media: media)
-
-                // self.faceFilter unwrapping
-                if let head = self.faceFilter {
-                    
-                    // Add childNode into self
-                    self.addChildNode(head)
-                }
+            // Add the face filter as a child node
+            if let head = self.faceFilter {
+                self.addChildNode(head)
             }
             
             // Put code into main async thread
