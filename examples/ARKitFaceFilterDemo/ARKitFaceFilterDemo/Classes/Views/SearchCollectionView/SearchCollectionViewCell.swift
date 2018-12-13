@@ -20,7 +20,7 @@ class SearchCollectionViewCell: UICollectionViewCell {
             if isSelected {
                 previewImageView.backgroundColor = .darkGray
             } else {
-                previewImageView.backgroundColor = .lightGray
+                previewImageView.backgroundColor = .clear
             }
         }
     }
@@ -36,8 +36,9 @@ class SearchCollectionViewCell: UICollectionViewCell {
                 previewImageView.image = try UIImage(data: Data(contentsOf: previewUrl))
             } catch {
                 print("could not fetch preview image: \(error)")
-                previewImageView.backgroundColor = .lightGray
             }
+        } else {
+            previewImageView.image = nil
         }
     }
     
