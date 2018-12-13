@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import SVRFClientSwift
+import SvrfSDK
 
 class SearchCollectionViewCell: UICollectionViewCell {
     
@@ -25,7 +25,7 @@ class SearchCollectionViewCell: UICollectionViewCell {
         }
     }
     
-    func setupWith(media: Media) {
+    func setupWith(media: SvrfMedia) {
         
         // Set media title
         titleLabel.text = media.title

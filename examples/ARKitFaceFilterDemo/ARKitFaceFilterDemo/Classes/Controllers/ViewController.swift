@@ -68,6 +68,9 @@ class ViewController: UIViewController {
         
         // Run the scene view's session
         sceneView.session.run(configuration)
+        
+        // Keep the screen on
+        UIApplication.shared.isIdleTimerDisabled = true
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -75,6 +78,9 @@ class ViewController: UIViewController {
         
         // Pause the scene view's session
         sceneView.session.pause()
+        
+        // Turn “Keep the screen on” off
+        UIApplication.shared.isIdleTimerDisabled = false
     }
     
     
@@ -146,8 +152,11 @@ extension ViewController: UISearchBarDelegate {
             return
         }
         
+        // Limit search to 3D face filters
+        let searchOptions = SearchOptions(type: [._3d], category: "Face Filters")
+        
         // Search content via SvrfSDK
-        SvrfSDK.search(query: query, type: [._3d], stereoscopicType: nil, category: nil, size: nil, pageNum: nil, onSuccess: { mediaArray in
+        SvrfSDK.search(query: query, options: searchOptions, onSuccess: { mediaArray in
            
             // Hide activity indicator
             self.activityIndicator.stopAnimating()
@@ -165,8 +174,7 @@ extension ViewController: UISearchBarDelegate {
                 // Show noResultsLabel
                 self.noResultsLabel.isHidden = false
             }
-        }) { (error) in
-            
+        }) { error in
             // Hide the activity indicator
             self.activityIndicator.stopAnimating()
         }

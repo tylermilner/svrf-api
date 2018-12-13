@@ -17,12 +17,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
         // Authenticate with an API key. Do not forget add Svrf API key into Info.Plist file.
         SvrfSDK.authenticate(onSuccess: {
-            
+            print("Successfully authenticated Svrf App")
         }) { error in
-            
+            print("\(error.title). \(error.description ?? "")")
         }
         
         return true

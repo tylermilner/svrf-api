@@ -7,13 +7,13 @@
 //
 
 import UIKit
-import SVRFClientSwift
+import SvrfSDK
 
 // Protocol for notify the view controller about something
 protocol SearchCollectionViewDelegate {
     
     // Function that notifies the view controller about media selected
-    func mediaSelected(media: Media)
+    func mediaSelected(media: SvrfMedia)
 }
 
 class SearchCollectionView: UICollectionView {
@@ -22,10 +22,10 @@ class SearchCollectionView: UICollectionView {
     var customDelegate: SearchCollectionViewDelegate?
     
     // The variable which stores current selected item.
-    fileprivate var selectedItem: Media?
+    fileprivate var selectedItem: SvrfMedia?
     
     // The array which stores all items which must be showed in the collection view
-    fileprivate var items: [Media] = []
+    fileprivate var items: [SvrfMedia] = []
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -41,7 +41,7 @@ class SearchCollectionView: UICollectionView {
         dataSource = self
     }
     
-    func setupWith(mediaArray: [Media]) {
+    func setupWith(mediaArray: [SvrfMedia]) {
         
         // Setup items which must be showed in the collection view
         items = mediaArray

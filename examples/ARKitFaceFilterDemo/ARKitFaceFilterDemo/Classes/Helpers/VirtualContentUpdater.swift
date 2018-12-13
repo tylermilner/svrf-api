@@ -20,30 +20,27 @@ class VirtualContentUpdater: NSObject {
     // The queue reference
     private let serialQueue = DispatchQueue(label: "com.svrf.ARKitFaceFilterDemo.serialSceneKitQueue")
     
-    //MARK: public functions
-    func resetFaceNode() {
+    //MARK: private functions
+    private func setupFaceNodeContent() {
+        guard let node = faceNode else {
+            return
+        }
         
-        guard let node = faceNode else { return }
+        resetFaceNode()
         
-        // Remove all childNodes from the faceNode
-        for child in node.childNodes {
-            child.removeFromParentNode()
+        if let content = virtualFaceNode {
+            node.addChildNode(content)
         }
     }
     
     private func resetFaceNode() {
-
-        // faceNode unwrapping
-        guard let node = faceNode else { return }
+        guard let node = faceNode else {
+            return
+        }
         
         // Remove all childNodes from the faceNode
-        resetFaceNode()
-        
-        // virtualFaceNode unwrapping
-        if let content = virtualFaceNode {
-            
-            // Add virtualFaceNode into faceNode
-            node.addChildNode(content)
+        for child in node.childNodes {
+            child.removeFromParentNode()
         }
     }
 }
