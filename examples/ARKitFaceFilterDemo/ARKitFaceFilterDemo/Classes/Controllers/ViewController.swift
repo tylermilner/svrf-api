@@ -50,9 +50,6 @@ class ViewController: UIViewController {
         // automatically update lighting
         sceneView.automaticallyUpdatesLighting = true
         
-        // Show statistics such as fps and timing information at the bottom
-        sceneView.showsStatistics = true
-        
         // Set the filter's delegate
         remoteFaceFilter.delegate = self
         
@@ -196,6 +193,9 @@ extension ViewController: SearchCollectionViewDelegate {
         
         // Hide resetButton
         resetButton.isHidden = false
+        
+        // Hide searchCollectionView
+        self.searchCollectionView.isHidden = true
     }
 }
 
