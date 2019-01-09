@@ -31,11 +31,9 @@ class SearchCollectionViewCell: UICollectionViewCell {
         titleLabel.text = media.title
         
         // Set media previewImage
-        if let previewImage = media.files?.images?._720x720, let previewUrl = URL(string: previewImage) {
-            do {
-                previewImageView.image = try UIImage(data: Data(contentsOf: previewUrl))
-            } catch {
-                print("could not fetch preview image: \(error)")
+        if let previewImageURL = media.files?.images?._720x720 {
+            ImageDownloader.imageFromServerURL(previewImageURL) { image in
+                self.previewImageView.image = image
             }
         } else {
             previewImageView.image = nil
