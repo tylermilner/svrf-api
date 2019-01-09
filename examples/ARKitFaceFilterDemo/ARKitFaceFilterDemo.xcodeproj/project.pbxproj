@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1CB434ABB504EE818FD69CB8 /* Pods_ARKitFaceFilterDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F66ADD631602B91F040C52E /* Pods_ARKitFaceFilterDemo.framework */; };
 		ACB2ABAD215953430082494A /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = ACB2ABAC215953430082494A /* LICENSE.txt */; };
+		EC3E19A221E6386B00ADDC25 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3E19A121E6386B00ADDC25 /* ImageDownloader.swift */; };
 		EC5B8611219F0363004D47DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5B8602219F0363004D47DB /* AppDelegate.swift */; };
 		EC5B8612219F0363004D47DB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5B8604219F0363004D47DB /* ViewController.swift */; };
 		EC5B8613219F0363004D47DB /* VirtualContentUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5B8606219F0363004D47DB /* VirtualContentUpdater.swift */; };
@@ -27,6 +28,7 @@
 		3F66ADD631602B91F040C52E /* Pods_ARKitFaceFilterDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ARKitFaceFilterDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACB2AB8D215944BD0082494A /* ARKitFaceFilterDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARKitFaceFilterDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACB2ABAC215953430082494A /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		EC3E19A121E6386B00ADDC25 /* ImageDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
 		EC5B8602219F0363004D47DB /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC5B8604219F0363004D47DB /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EC5B8606219F0363004D47DB /* VirtualContentUpdater.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VirtualContentUpdater.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 		EC5B8605219F0363004D47DB /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				EC3E19A121E6386B00ADDC25 /* ImageDownloader.swift */,
 				EC5B8606219F0363004D47DB /* VirtualContentUpdater.swift */,
 				EC5B8607219F0363004D47DB /* VirtualFaceContent */,
 			);
@@ -317,6 +320,7 @@
 			files = (
 				EC5B8614219F0363004D47DB /* VirtualFaceContent.swift in Sources */,
 				EC5B8612219F0363004D47DB /* ViewController.swift in Sources */,
+				EC3E19A221E6386B00ADDC25 /* ImageDownloader.swift in Sources */,
 				EC5B861E219F0433004D47DB /* SearchCollectionViewCell.swift in Sources */,
 				EC5B861F219F0433004D47DB /* SearchCollectionView.swift in Sources */,
 				EC5B8615219F0363004D47DB /* RemoteFaceFilter.swift in Sources */,
