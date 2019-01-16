@@ -35,6 +35,9 @@ class RemoteFaceFilter: SCNNode {
         DispatchQueue.global(qos: .background).async { [unowned self] in
             // Generate a face filter SCNNode from a Media
             SvrfSDK.getFaceFilter(with: media, onSuccess: { faceFilter in
+                // Remove any existing face filter from the SCNScene
+                self.resetFaceFilters()
+                // Set new face filter
                 self.faceFilter = faceFilter
             }, onFailure: { error in
                 print("\(error.title). \(error.description ?? "")")
