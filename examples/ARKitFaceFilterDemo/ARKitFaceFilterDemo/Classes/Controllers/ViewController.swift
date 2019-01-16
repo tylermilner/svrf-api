@@ -47,6 +47,9 @@ class ViewController: UIViewController {
         // Set the scene view's delegate
         sceneView.delegate = contentUpdater
         
+        // enable default lighting settings, allows PBR metallics to be properly lit
+        sceneView.autoenablesDefaultLighting = true
+        
         // automatically update lighting
         sceneView.automaticallyUpdatesLighting = true
         
