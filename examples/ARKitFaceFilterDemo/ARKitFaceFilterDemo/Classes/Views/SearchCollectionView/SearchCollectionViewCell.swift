@@ -30,13 +30,14 @@ class SearchCollectionViewCell: UICollectionViewCell {
         // Set media title
         titleLabel.text = media.title
         
+        // Reset media previewImage
+        previewImageView.image = nil
+        
         // Set media previewImage
         if let previewImageURL = media.files?.images?._720x720 {
             ImageDownloader.imageFromServerURL(previewImageURL) { image in
                 self.previewImageView.image = image
             }
-        } else {
-            previewImageView.image = nil
         }
     }
     
