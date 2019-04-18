@@ -1,16 +1,16 @@
 {
   "name": "a-frame-photo-viewer",
-  "version": "1.0.0",
-  "description": "SVRF API Example: A-Frame 360 Photo Viewer",
+  "version": "2.0.0",
+  "description": "Svrf API Example: A-Frame 360 Photo Viewer",
   "main": "dist/bundle.js",
   "scripts": {
     "start": "npm run watch",
     "build": "mkdir -p ./dist && browserify ./src/main.js -o ./dist/bundle.js",
     "watch": "mkdir -p ./dist && watchify ./src/main.js -o ./dist/bundle.js"
   },
-  "author": "SVRF, Inc.",
+  "author": "Svrf, Inc.",
   "dependencies": {
-    "svrf-client": "^1.1.1"
+    "svrf-client": "^2.0.0-beta.1"
   },
   "devDependencies": {
     "browserify": "^16.2.2",

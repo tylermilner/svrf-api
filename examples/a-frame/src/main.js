@@ -47,7 +47,8 @@ AFRAME.registerComponent('set-image', {
     targetEl.setAttribute('animation__fade', {
       property: 'material.color',
       startEvents: 'fade-image',
-      dir: 'alternate',
+      dur: 2000,
+      dir: 'reverse',
       from: '#FFF',
       to: '#000',
     });

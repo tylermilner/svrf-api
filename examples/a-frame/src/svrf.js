@@ -1,48 +1,32 @@
-const SVRF = require('svrf-client');
+const Svrf = require('svrf-client');
 
-const defaultClient = SVRF.ApiClient.instance;
-// Configure API key authorization: XAppToken
-const XAppToken = defaultClient.authentications['XAppToken'];
-const authApi = new SVRF.AuthenticateApi();
-const mediaApi = new SVRF.MediaApi();
+// Replace this String with your Svrf API Key
 const apiKey = 'XXXXXXXXXXXXXX';
+const svrf = new Svrf(apiKey);
 
-let token;
-let nextPageCursor;
-
-function authenticate() {
-  if (token) {
-    return Promise.resolve();
-  }
-  
-  const body = new SVRF.Body(apiKey);
-
-  return authApi.authenticate(body)
-    .then((res) => {
-      XAppToken.apiKey = res.token;
-    });
-}
+let nextPageNum = 0;
 
 function trending () {
-  // Only fetch 1 image per request. Set nextPageCursor if available
-  const options = Object.assign({size: 1}, nextPageCursor ? {nextPageCursor} : null);
+  // Only fetch 1 image per request. Set nextPage if available
+  const options = {
+    pageNum: nextPageNum,
+    size: 1,
+    type: Svrf.enums.mediaType.PHOTO,
+  };
 
-  return authenticate()
-    .then(() => mediaApi.getTrending(options))
+  return svrf.media.getTrending(options)
     .then((res) => {
       if (!res || !res.media.length) {
         return Promise.reject(new Error('No media returned'));
       }
 
-      nextPageCursor = res.nextPageCursor;
+      nextPageNum = res.nextPageNum;
       const {images} = res.media[0].files;
 
-      // Use 4096px image if available, otherwise try for smaller image
+      // Use a 4096px wide image, otherwise try for a smaller image
       return images['4096'] || images['1080'];
     })
-    .catch((error) => {
-      console.error(error);
-    });
+    .catch((err) => console.error(err));
 }
 
 module.exports = {
