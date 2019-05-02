@@ -265,28 +265,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-ARKitFaceFilterDemo/Pods-ARKitFaceFilterDemo-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/Analytics/Analytics.framework",
-				"${BUILT_PRODUCTS_DIR}/SVRFClient/SVRFClient.framework",
-				"${BUILT_PRODUCTS_DIR}/SvrfGLTFSceneKit/SvrfGLTFSceneKit.framework",
-				"${BUILT_PRODUCTS_DIR}/SvrfSDK/SvrfSDK.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-ARKitFaceFilterDemo/Pods-ARKitFaceFilterDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Analytics.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVRFClient.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SvrfGLTFSceneKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SvrfSDK.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-ARKitFaceFilterDemo/Pods-ARKitFaceFilterDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ARKitFaceFilterDemo/Pods-ARKitFaceFilterDemo-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ARKitFaceFilterDemo/Pods-ARKitFaceFilterDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9FD83BBDA3D565C0B75381F5 /* [CP] Check Pods Manifest.lock */ = {

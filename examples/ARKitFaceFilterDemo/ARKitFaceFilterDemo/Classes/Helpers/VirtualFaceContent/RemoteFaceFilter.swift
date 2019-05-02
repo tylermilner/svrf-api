@@ -74,14 +74,10 @@ class RemoteFaceFilter: SCNNode {
     var blendShapes: [ARFaceAnchor.BlendShapeLocation: NSNumber] = [:] {
         didSet {
             
-            // Each child node may have blend shape targets so we enumerate over all of them to make sure
-            // that each blend target is expressed completely
-            
-            faceFilter?.enumerateHierarchy({ (node, _) in
-                if node.morpher?.targets != nil {
-                    SvrfSDK.setBlendShapes(blendShapes: blendShapes, for: node)
-                }
-            })
+            // Set blends shapes for face filter
+            if let faceFilter = faceFilter {
+                SvrfSDK.setBlendShapes(blendShapes: blendShapes, for: faceFilter)
+            }
         }
     }
 }
