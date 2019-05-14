@@ -27,22 +27,18 @@ class VirtualContentUpdater: NSObject {
         }
         
         resetFaceNode()
-        
+
+        // Remove all childNodes from the faceNode
+        for child in node.childNodes {
+            child.removeFromParentNode()
+        }
+
+        // Add new content as child node
         if let content = virtualFaceNode {
             node.addChildNode(content)
         }
     }
     
-    private func resetFaceNode() {
-        guard let node = faceNode else {
-            return
-        }
-        
-        // Remove all childNodes from the faceNode
-        for child in node.childNodes {
-            child.removeFromParentNode()
-        }
-    }
 }
 
 // Extension that realises ARSCNViewDelegate protocol's functions
