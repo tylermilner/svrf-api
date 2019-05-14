@@ -40,10 +40,4 @@ class SearchCollectionViewCell: UICollectionViewCell {
             }
         }
     }
-    
-    func highLightCell(highLight: Bool) {
-        
-        // Hightlight cell
-        previewImageView.backgroundColor = highLight ? .gray : .clear
-    }
 }
