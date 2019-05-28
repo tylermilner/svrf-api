@@ -39,21 +39,20 @@ class RemoteFaceFilter: SCNNode {
                     self.resetFaceFilters()
                     // Set new face filter
                     self.faceFilter = faceFilter
+
+                    // Put code into main async thread
+                    DispatchQueue.main.async {
+                        // Add the face filter as a child node
+                        if let head = self.faceFilter {
+                            self.addChildNode(head)
+                        }
+
+                        // Notify the view controller that faceFilter loaded
+                        self.delegate?.faceFilterLoaded()
+                    }
                 }, onFailure: { error in
                     print("Error: \(error.svrfDescription ?? "")")
                 })
-            
-            // Add the face filter as a child node
-            if let head = self.faceFilter {
-                self.addChildNode(head)
-            }
-            
-            // Put code into main async thread
-            DispatchQueue.main.async {
-                
-                // Notify the view controller that faceFilter loaded
-                self.delegate?.faceFilterLoaded()
-            }
         }
     }
     
