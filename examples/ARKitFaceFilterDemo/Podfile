@@ -7,5 +7,4 @@ target 'ARKitFaceFilterDemo' do
 
   # Pods for ARKitFaceFilterDemo
   pod 'SvrfSDK', '~> 2.0.0'
-  pod 'SvrfGLTFSceneKit', '~> 1.1'
 end
