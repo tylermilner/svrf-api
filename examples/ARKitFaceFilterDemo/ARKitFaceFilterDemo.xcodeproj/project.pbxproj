@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		05E2FB4CD72F4FC89E549FCE /* Pods_ARKitFaceFilterDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D49C68584EDD4EAF09500B6 /* Pods_ARKitFaceFilterDemo.framework */; };
 		ACB2ABAD215953430082494A /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = ACB2ABAC215953430082494A /* LICENSE.txt */; };
+		BF0242DAF69BDAA48BF1A343 /* Pods_ARKitFaceFilterDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6060484CCF774C426E21F96B /* Pods_ARKitFaceFilterDemo.framework */; };
 		EC3E19A221E6386B00ADDC25 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3E19A121E6386B00ADDC25 /* ImageDownloader.swift */; };
 		EC5B8611219F0363004D47DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5B8602219F0363004D47DB /* AppDelegate.swift */; };
 		EC5B8612219F0363004D47DB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5B8604219F0363004D47DB /* ViewController.swift */; };
@@ -23,12 +23,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		6499B032045F483C6A0B3704 /* Pods-ARKitFaceFilterDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARKitFaceFilterDemo.release.xcconfig"; path = "Target Support Files/Pods-ARKitFaceFilterDemo/Pods-ARKitFaceFilterDemo.release.xcconfig"; sourceTree = "<group>"; };
-		7D49C68584EDD4EAF09500B6 /* Pods_ARKitFaceFilterDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ARKitFaceFilterDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		916B2904376186B7E007AC3B /* Pods-ARKitFaceFilterDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARKitFaceFilterDemo.debug.xcconfig"; path = "Target Support Files/Pods-ARKitFaceFilterDemo/Pods-ARKitFaceFilterDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		44196BA9B7A62194123F9EB6 /* Pods-ARKitFaceFilterDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARKitFaceFilterDemo.release.xcconfig"; path = "Target Support Files/Pods-ARKitFaceFilterDemo/Pods-ARKitFaceFilterDemo.release.xcconfig"; sourceTree = "<group>"; };
+		6060484CCF774C426E21F96B /* Pods_ARKitFaceFilterDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ARKitFaceFilterDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACB2AB8D215944BD0082494A /* ARKitFaceFilterDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARKitFaceFilterDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACB2ABAC215953430082494A /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
-		C9802658A782C87C5A7F657D /* Pods_ARKitFaceFilterDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ARKitFaceFilterDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC3E19A121E6386B00ADDC25 /* ImageDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
 		EC5B8602219F0363004D47DB /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC5B8604219F0363004D47DB /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -41,6 +39,7 @@
 		EC5B8610219F0363004D47DB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC5B861C219F0433004D47DB /* SearchCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchCollectionViewCell.swift; sourceTree = "<group>"; };
 		EC5B861D219F0433004D47DB /* SearchCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchCollectionView.swift; sourceTree = "<group>"; };
+		FFB7BA454647731604F5EF03 /* Pods-ARKitFaceFilterDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARKitFaceFilterDemo.debug.xcconfig"; path = "Target Support Files/Pods-ARKitFaceFilterDemo/Pods-ARKitFaceFilterDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,19 +47,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05E2FB4CD72F4FC89E549FCE /* Pods_ARKitFaceFilterDemo.framework in Frameworks */,
+				BF0242DAF69BDAA48BF1A343 /* Pods_ARKitFaceFilterDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A2ECFE91DC52AD63408D3F15 /* Frameworks */ = {
+		89CC7CB4F0ACD4DEC269F8CB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7D49C68584EDD4EAF09500B6 /* Pods_ARKitFaceFilterDemo.framework */,
+				6060484CCF774C426E21F96B /* Pods_ARKitFaceFilterDemo.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9D64547DE6CDDDA862B79639 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FFB7BA454647731604F5EF03 /* Pods-ARKitFaceFilterDemo.debug.xcconfig */,
+				44196BA9B7A62194123F9EB6 /* Pods-ARKitFaceFilterDemo.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 		ACB2AB84215944BD0082494A = {
@@ -69,8 +77,8 @@
 				ACB2AB8F215944BD0082494A /* ARKitFaceFilterDemo */,
 				ACB2ABAB215953430082494A /* LICENSE */,
 				ACB2AB8E215944BD0082494A /* Products */,
-				B795CF212BB815C5C41EED6A /* Pods */,
-				A2ECFE91DC52AD63408D3F15 /* Frameworks */,
+				9D64547DE6CDDDA862B79639 /* Pods */,
+				89CC7CB4F0ACD4DEC269F8CB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,16 +107,6 @@
 				ACB2ABAC215953430082494A /* LICENSE.txt */,
 			);
 			path = LICENSE;
-			sourceTree = "<group>";
-		};
-		B795CF212BB815C5C41EED6A /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				916B2904376186B7E007AC3B /* Pods-ARKitFaceFilterDemo.debug.xcconfig */,
-				6499B032045F483C6A0B3704 /* Pods-ARKitFaceFilterDemo.release.xcconfig */,
-			);
-			name = Pods;
-			path = Pods;
 			sourceTree = "<group>";
 		};
 		EC5B8601219F0363004D47DB /* Classes */ = {
@@ -198,11 +196,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ACB2ABA1215944BE0082494A /* Build configuration list for PBXNativeTarget "ARKitFaceFilterDemo" */;
 			buildPhases = (
-				245C21B9047525ACCDEC6605 /* [CP] Check Pods Manifest.lock */,
+				50E78A11E64F2A0973D57260 /* [CP] Check Pods Manifest.lock */,
 				ACB2AB89215944BD0082494A /* Sources */,
 				ACB2AB8A215944BD0082494A /* Frameworks */,
 				ACB2AB8B215944BD0082494A /* Resources */,
-				AA28B9BA7BDD457BDB9D09A6 /* [CP] Embed Pods Frameworks */,
+				4CF6C7C990D9D720450962FD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -262,7 +260,35 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		245C21B9047525ACCDEC6605 /* [CP] Check Pods Manifest.lock */ = {
+		4CF6C7C990D9D720450962FD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ARKitFaceFilterDemo/Pods-ARKitFaceFilterDemo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Analytics/Analytics.framework",
+				"${BUILT_PRODUCTS_DIR}/SvrfGLTFSceneKit/SvrfGLTFSceneKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SvrfSDK/SvrfSDK.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Analytics.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SvrfGLTFSceneKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SvrfSDK.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ARKitFaceFilterDemo/Pods-ARKitFaceFilterDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		50E78A11E64F2A0973D57260 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -282,36 +308,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		AA28B9BA7BDD457BDB9D09A6 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ARKitFaceFilterDemo/Pods-ARKitFaceFilterDemo-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/Analytics/Analytics.framework",
-				"${BUILT_PRODUCTS_DIR}/SVRFClient/SVRFClient.framework",
-				"${BUILT_PRODUCTS_DIR}/SvrfGLTFSceneKit/SvrfGLTFSceneKit.framework",
-				"${BUILT_PRODUCTS_DIR}/SvrfSDK/SvrfSDK.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Analytics.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVRFClient.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SvrfGLTFSceneKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SvrfSDK.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ARKitFaceFilterDemo/Pods-ARKitFaceFilterDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -453,19 +449,19 @@
 		};
 		ACB2ABA2215944BE0082494A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 916B2904376186B7E007AC3B /* Pods-ARKitFaceFilterDemo.debug.xcconfig */;
+			baseConfigurationReference = FFB7BA454647731604F5EF03 /* Pods-ARKitFaceFilterDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WT765S9Q42;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/ARKitFaceFilterDemo/Plists/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.legitish.ARKitFaceFilterDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.svrf.ARKitFaceFilterDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -474,19 +470,19 @@
 		};
 		ACB2ABA3215944BE0082494A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6499B032045F483C6A0B3704 /* Pods-ARKitFaceFilterDemo.release.xcconfig */;
+			baseConfigurationReference = 44196BA9B7A62194123F9EB6 /* Pods-ARKitFaceFilterDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WT765S9Q42;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/ARKitFaceFilterDemo/Plists/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.legitish.ARKitFaceFilterDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.svrf.ARKitFaceFilterDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
