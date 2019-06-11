@@ -63,7 +63,7 @@ extension SearchCollectionView: UICollectionViewDataSource, UICollectionViewDele
         cell.setupWith(media: items[indexPath.row])
         
         if let selectedItem = selectedItem {
-            cell.isSelected = items[indexPath.item].title == selectedItem.title
+            cell.isSelected = items[indexPath.item].id == selectedItem.id
         }
         
         return cell
