@@ -153,11 +153,11 @@ extension ViewController: UISearchBarDelegate {
         }
         
         // Limit search to 3D face filters
-        let searchOptions = SearchOptions(type: [._3d], category: .filters)
+        let searchOptions = SvrfOptions(type: [._3d], category: .filters)
         
         // Search content via SvrfSDK
-        SvrfSDK.search(query: query, options: searchOptions, onSuccess: { mediaArray, _ in
-           
+        _ = SvrfSDK.search(query: query, options: searchOptions, onSuccess: { mediaArray, _ in
+
             // Hide activity indicator
             self.activityIndicator.stopAnimating()
             

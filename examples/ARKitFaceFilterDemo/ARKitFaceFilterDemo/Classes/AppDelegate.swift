@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         SvrfSDK.authenticate(onSuccess: {
             print("Successfully authenticated Svrf App")
         }) { error in
-            print("\(error.title). \(error.description ?? "")")
+            print("Authentication Error: \(error.svrfDescription ?? "")")
         }
         
         return true

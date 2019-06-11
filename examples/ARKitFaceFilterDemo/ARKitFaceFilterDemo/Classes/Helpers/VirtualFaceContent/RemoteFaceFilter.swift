@@ -22,6 +22,7 @@ class RemoteFaceFilter: SCNNode {
     
     // Delegate that realises RemoteFaceFilterDelegate protocol's functions
     var delegate: RemoteFaceFilterDelegate?
+    var currentRequest: URLSessionDataTask?
     
     // faceFilter declaration
     private var faceFilter: SCNNode?
@@ -31,30 +32,32 @@ class RemoteFaceFilter: SCNNode {
     
     func loadFaceFilter(media: SvrfMedia) -> Void {
         
-        // Put code into background thread
-        DispatchQueue.global(qos: .background).async { [unowned self] in
-            // Generate a face filter SCNNode from a Media
-            SvrfSDK.getFaceFilter(with: media, onSuccess: { faceFilter in
+        if let currentRequest = currentRequest {
+            currentRequest.cancel()
+        }
+
+        // Generate a face filter SCNNode from a Media
+        currentRequest = SvrfSDK.generateNode(
+            for: media,
+            onSuccess: { faceFilter in
                 // Remove any existing face filter from the SCNScene
                 self.resetFaceFilters()
                 // Set new face filter
                 self.faceFilter = faceFilter
-            }, onFailure: { error in
-                print("\(error.title). \(error.description ?? "")")
-            })
-            
-            // Add the face filter as a child node
-            if let head = self.faceFilter {
-                self.addChildNode(head)
-            }
-            
-            // Put code into main async thread
-            DispatchQueue.main.async {
                 
-                // Notify the view controller that faceFilter loaded
-                self.delegate?.faceFilterLoaded()
-            }
-        }
+                // Put code into main async thread
+                DispatchQueue.main.async {
+                    // Add the face filter as a child node
+                    if let head = self.faceFilter {
+                        self.addChildNode(head)
+                    }
+                    
+                    // Notify the view controller that faceFilter loaded
+                    self.delegate?.faceFilterLoaded()
+                }
+        }, onFailure: { error in
+            print("Error: \(error.svrfDescription ?? "")")
+        })
     }
     
     // Function that deletes all childNodes from the self.faceFilter
