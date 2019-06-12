@@ -138,7 +138,7 @@ extension ViewController: UISearchBarDelegate {
         // Hide noResultsLabel
         self.noResultsLabel.isHidden = true
     }
-    
+
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         
         // Show the activity indicator
@@ -175,6 +175,7 @@ extension ViewController: UISearchBarDelegate {
                 self.noResultsLabel.isHidden = false
             }
         }) { error in
+            print("Error: \(error.svrfDescription ?? "(no description)")")
             // Hide the activity indicator
             self.activityIndicator.stopAnimating()
         }
