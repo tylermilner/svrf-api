@@ -6,6 +6,6 @@ target 'ARKitFaceFilterDemo' do
   use_frameworks!
 
   # Pods for ARKitFaceFilterDemo
-  pod 'SvrfSDK', '~> 2.0.0'
-  pod 'SvrfGLTFSceneKit', '~> 1.1'
+  pod 'SvrfSDK', :path => '../../../svrf-ios-sdk/'
+  pod 'SvrfGLTFSceneKit', :path => '../../../SvrfGLTFsceneKit'
 end
