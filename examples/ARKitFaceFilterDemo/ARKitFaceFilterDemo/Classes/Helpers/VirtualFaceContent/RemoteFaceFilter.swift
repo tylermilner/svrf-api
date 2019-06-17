@@ -25,7 +25,7 @@ class RemoteFaceFilter: SCNNode {
     var currentRequest: URLSessionDataTask?
     
     // faceFilter declaration
-    private var faceFilter: SvrfFaceFilter?
+    var faceFilter: SvrfFaceFilter?
     
     // MTLDevice declaration
     private var device: MTLDevice?
