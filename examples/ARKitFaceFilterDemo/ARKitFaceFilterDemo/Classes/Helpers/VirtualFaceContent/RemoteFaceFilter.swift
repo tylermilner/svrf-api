@@ -30,7 +30,7 @@ class RemoteFaceFilter: SCNNode {
     // MTLDevice declaration
     private var device: MTLDevice?
     
-    func loadFaceFilter(media: SvrfMedia) -> Void {
+    func loadFaceFilter(media: SvrfMedia, sceneView: SCNView) -> Void {
         
         if let currentRequest = currentRequest {
             currentRequest.cancel()
@@ -50,6 +50,8 @@ class RemoteFaceFilter: SCNNode {
                     if let head = self.faceFilter?.node {
                         self.addChildNode(head)
                     }
+                    sceneView.overlaySKScene = self.faceFilter?.sceneOverlay
+                    sceneView.overlaySKScene?.size = sceneView.bounds.size
 
                     // Notify the view controller that faceFilter loaded
                     self.delegate?.faceFilterLoaded()
