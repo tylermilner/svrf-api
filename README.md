@@ -30,8 +30,7 @@ You can use Svrf API libraries to encapsulate endpoint requests:
 
 * [C#][CSharp]
 * [Java][]
-* [Javascript][]
-* [Swift][]
+* [JavaScript][]
 
 ## SDKs
 
@@ -57,14 +56,14 @@ The Svrf API has a generous rate limit to ensure the best experience for your us
 
 [API Email]: mailto:api@svrf.com
 [CORS]: https://en.wikipedia.org/wiki/Cross-origin_resource_sharing
-[CSharp]: https://github.com/Svrf/svrf-csharp-client
+[CSharp]: https://docs.svrf.com/docs/csharp
 [Docs Search]: https://developers.svrf.com/#tag/Media/paths/~1vr~1search?q={q}/get
 [Docs Trending]: https://developers.svrf.com/#tag/Media/paths/~1vr~1trending/get
-[iOS SDK]: https://github.com/Svrf/svrf-ios-sdk
+[iOS SDK]: https://docs.svrf.com/docs/ios
 [Java]: https://github.com/Svrf/svrf-java-client
-[Javascript]: https://github.com/Svrf/svrf-javascript-client
+[JavaScript]: https://docs.svrf.com/docs/web
 [JSON]: http://www.json.org/
-[Support]: https://github.com/Svrf/svrf-api/issues/new/choose
+[Support]: https://docs.svrf.com/discuss-new
 [Svrf]: https://www.svrf.com
 [Svrf Dev]: https://developers.svrf.com
 [Svrf User Settings]: https://www.svrf.com/user/settings
